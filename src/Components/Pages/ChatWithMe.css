@@ -1,0 +1,196 @@
+/* ===============================
+   Container & Page Layout
+=============================== */
+.AyushAI {
+  display: flex;
+  flex-direction: column; /* Heading → Chat → Input */
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "bobbyJones", sans-serif;
+  color: #fff;
+}
+
+/* ===============================
+   Heading Section
+=============================== */
+.sayHi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: relative; /* allows z-index to work */
+}
+
+.speedcuber {
+  font-family: "Gistesy", "Qwigley", cursive;
+  font-size: 40px;
+  margin: 0; /* remove negative margin */
+  z-index: 2; /* on top */
+  position: relative;
+}
+
+.ayush {
+  font-size: 80px;
+  font-weight: 900;
+  font-family: "Musica-BF6892e352f39a5", "Anton", sans-serif;
+  color: #0096ff;
+  z-index: 1; /* below speedcuber but above background */
+  position: relative;
+  margin-top: -20px; /* slight overlap if needed */
+}
+
+/* ===============================
+   Chat Section
+=============================== */
+.Chatbox {
+  width: 100%;
+  max-width: 900px;
+  height: 60vh; /* fills majority of the page */
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* User Query Messages */
+.QuerySent {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Querypara {
+  max-width: 60%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: pre-line;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Querypara:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* AI Responses */
+.ResponseByAI {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.ResponseByAI .MuiAvatar-root {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.ResponsePara {
+  max-width: 80%;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "bobbyJones", sans-serif;
+  word-wrap: break-word;
+}
+
+/* ===============================
+   Input / Submission Section
+=============================== */
+.ChatWithMe {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #1a1a1a;
+  border-radius: 30px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.inputContainer:hover {
+  background-color: #2a2a2a;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  max-height: 150px;
+  overflow-y: auto;
+  transition: all 0.2s ease;
+
+  font-family: "bobbyJones", sans-serif;
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+/* Hide scrollbar but allow scrolling */
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.MuiIconButton-root {
+  margin-left: 10px;
+  color: #222;
+  transition: transform 0.2s ease;
+}
+
+.MuiIconButton-root:hover {
+  transform: translateY(-2px);
+  background-color: #eee;
+}
+
+/* ===============================
+   Caution / Info Text
+=============================== */
+.caution {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #3a3a3a;
+}
+/* 
+.ResponsePara {
+  white-space: pre-wrap; 
+  overflow-wrap: break-word;
+  line-height: 1.4;
+} */

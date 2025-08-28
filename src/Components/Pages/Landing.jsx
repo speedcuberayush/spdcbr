@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/Landing.css";
 import ayushImg from "../../assets/images/ayush.png";
 import IntroduceAboutme from "./IntroduceAboutme";
@@ -10,34 +9,54 @@ import WorkAreas from "./WorkAreas";
 import LatestProjects from "./LatestProjects";
 import Findme from "./Findme";
 import LatestUpdates from "./LatestUpdates";
+import ChatWithMe from "./ChatWithMe";
 
-function Part1() {
+function Part1({ toggleMode }) {
   return (
     <div className="Part1">
-      <TagLine />
+      <TagLine toggleMode={toggleMode} />
       <div className="ProfileImageBanner">
         <img src={ayushImg} alt="Ayush" />
       </div>
     </div>
   );
 }
+
 function Landing() {
+  const [ayushAImode, setAyushAImode] = useState(false);
+  const [animating, setAnimating] = useState(false);
+
+  const toggleMode = () => {
+    // Start animation
+    setAnimating(true);
+    // Wait for animation to finish before switching content
+    setTimeout(() => {
+      setAyushAImode((prev) => !prev);
+      setAnimating(false);
+    }, 400); // animation duration in ms
+  };
 
   return (
-    <div className="LandingContainerBox">
+    <div className={`LandingContainerBox ${ayushAImode ? "ayushAImode" : ""}`}>
       <div className="LeftPartLanding">
-        <SocialBtns />
+        <SocialBtns toggleMode={toggleMode}  />
       </div>
 
-      <div className="MainPartLanding">
-        <Part1 />
-        <IntroduceAboutme />
-        <WorkExperience />
-        <Skills />
-        <LatestProjects />
-        <LatestUpdates />
-        <WorkAreas />
-        <Findme />
+      <div className={`MainPartLanding ${animating ? "fade-out" : "fade-in"}`}>
+        {!ayushAImode ? (
+          <>
+            <Part1 toggleMode={toggleMode} />
+            <IntroduceAboutme />
+            <WorkExperience />
+            <Skills />
+            <LatestProjects />
+            <LatestUpdates />
+            <WorkAreas />
+            <Findme />
+          </>
+        ) : (
+          <ChatWithMe toggleMode={toggleMode} />
+        )}
       </div>
 
       <div className="RightPartLanding">

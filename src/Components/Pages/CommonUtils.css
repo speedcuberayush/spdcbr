@@ -263,3 +263,17 @@ h1 {
     transform: translateX(-50%);
   }
 }
+
+.MainPartLanding {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}

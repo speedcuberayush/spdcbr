@@ -74,36 +74,41 @@ const socialLinks = [
   },
   {
     title: "Chat with my Clone",
-    href: "https://github.com/speedcuberayush",
+    href: "",
     icon: <Psychology />,
   },
 ];
 
-function SocialBtns() {
+function SocialBtns({ toggleMode }) {
   return (
     <Stack
       direction="column"
       sx={{
         alignItems: "center",
-        justifyContent: { xs: "flex-start", lg: "flex-end" }, // lg = 992px+
+        justifyContent: { xs: "flex-start", lg: "flex-end" },
         height: { xs: "auto", lg: "500px" },
       }}
     >
-      {socialLinks.map(({ title, href, icon }) => (
-        <VirtualTooltip key={title} title={title}>
-          <IconButton
-            className="icon-glow"
-            aria-label={title}
-            sx={{ color: "white" }}
-            component="a"
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {icon}
-          </IconButton>
-        </VirtualTooltip>
-      ))}
+      {socialLinks.map(({ title, href, icon }) => {
+        const isChatButton = title === "Chat with my Clone";
+
+        return (
+          <VirtualTooltip key={title} title={title}>
+            <IconButton
+              className="icon-glow"
+              aria-label={title}
+              sx={{ color: "white" }}
+              component="a"
+              href={isChatButton ? undefined : href} // prevent navigation for chat
+              target={isChatButton ? undefined : "_blank"}
+              rel={isChatButton ? undefined : "noopener noreferrer"}
+              onClick={isChatButton ? toggleMode : undefined} // toggle mode for chat
+            >
+              {icon}
+            </IconButton>
+          </VirtualTooltip>
+        );
+      })}
     </Stack>
   );
 }
@@ -135,7 +140,7 @@ const Star = ({ num }) => (
 
 // ---------- TagLine ----------
 
-function TagLine() {
+function TagLine({ toggleMode }) {
   return (
     <div className="taglineSection">
       <span className="tagline">
@@ -156,7 +161,7 @@ function TagLine() {
         <p>Crafting Scalable SaaS & Digital Twins That Think</p>
       </div>
       <>
-        <button className="chatwithMyclone">
+        <button className="chatwithMyclone ayushAImode" onClick={toggleMode}>
           Chat with my Clone
           <div className="star-1">
             <svg
