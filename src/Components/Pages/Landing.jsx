@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import "../styles/landing.css";
+import "../styles/Landing.css";
 import ayushImg from "../../assets/images/ayush.png";
 import IntroduceAboutme from "./IntroduceAboutme";
 import { SocialBtns, TagLine } from "./CommonUtils";
