@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Qwigley&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@font-face {
+  font-family: "Gistesy";
+  src: url("../../assets/fonts/Gistesy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Viafont";
+  src: url("../../assets/fonts/Viafont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Memesique-Regular";
+  src: url("../../assets/fonts/Memesique-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LittleBoy";
+  src: url("../../assets/fonts/LittleBoy-X3m3a.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Payback";
+  src: url("../../assets/fonts/Payback.ttf") format("truetype");
+}
+@font-face {
+  font-family: "round8-four";
+  src: url("../../assets/fonts/round8-four.otf") format("opentype");
+}
+@font-face {
+  font-family: "Musica-BF6892e352f39a5";
+  src: url("../../assets/fonts/Musica-BF6892e352f39a5.otf") format("opentype");
+}
+@font-face {
+  font-family: "Payback";
+  src: url("../../assets/fonts/Payback.ttf") format("truetype");
+}
+/* new  */
+@font-face {
+  font-family: "bobbyJones";
+  src: url("../../assets/fonts/bobby-jones-condensed.otf") format("opentype");
+}
+@keyframes socialHover {
+  from {
+    filter: drop-shadow(0 0 4px rgba(0, 150, 255, 0.5))
+      drop-shadow(0 0 8px rgba(0, 150, 255, 0.7))
+      drop-shadow(0 0 12px rgba(0, 150, 255, 0.9));
+  }
+  to {
+    filter: drop-shadow(0 0 2px rgba(0, 150, 255, 0.3))
+      drop-shadow(0 0 6px rgba(0, 150, 255, 0.5))
+      drop-shadow(0 0 10px rgba(0, 150, 255, 0.7));
+  }
+}
+
+.tagline {
+  font-family: "Payback";
+  font-size: 3rem;
+  text-align: center;
+  /* padding: 2rem 1rem; */
+
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Musica-BF6892e352f39a5";
+}
+
+.description {
+  line-height: 1;
+  margin-bottom: 12%;
+  /* font-family: "round8-four","Bebas Neue", sans-serif; */
+}
+
+.description p {
+  /* font-size: 0.6rem; */
+  margin: 0;
+  font-family: "bobbyJones", "LittleBoy", sans-serif;
+  /* font-family: "Bebas Neue","Musica-BF6892e352f39a5"; */
+  padding: 0;
+  /* font-size: 1rem; */
+  font-size: 1.25rem;
+}
+
+/* tagline */
+
+.tagline {
+  font-family: "Payback";
+  font-size: 3rem;
+  text-align: center;
+  /* padding: 2rem 1rem; */
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Musica-BF6892e352f39a5";
+}
+
+.description {
+  line-height: 1;
+  margin-bottom: 12%;
+  /* font-family: "round8-four","Bebas Neue", sans-serif; */
+}
+
+.description p {
+  /* font-size: 0.6rem; */
+  margin: 0;
+  font-family: "bobbyJones", "LittleBoy", sans-serif;
+  /* font-family: "Bebas Neue","Musica-BF6892e352f39a5"; */
+  padding: 0;
+  /* font-size: 1rem; */
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.tagline p,
+h1 {
+  margin: 0;
+  padding: 0;
+  /* font-size: 1.5rem; */
+  line-height: 1;
+}
+
+.tagline h1 {
+  font-size: 5rem;
+}
+
+.description .mytitle {
+  color: #fff;
+}
+
+.taglineSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.neonAnimation {
+  padding: 1rem;
+  color: #0096ff;
+
+  animation: neon 0.1s infinite alternate;
+}
+.StylishHeading {
+  position: relative;
+  display: inline-block; /* keeps things tight around text */
+  width: 100%;
+  text-align: left;
+}
+
+.upperHeading {
+  position: relative;
+  z-index: 1; /* stays on top */
+  margin: 0;
+  font-size: 50px;
+  font-family: "Gistesy", "Qwigley", cursive;
+  color: #fff;
+}
+
+.lowerHeading {
+  position: relative;
+  z-index: 0; /* behind upper */
+  margin: -40px 0 0; /* pull it up under upper */
+  font-size: 80px;
+  font-weight: 900;
+  font-family: "Musica-BF6892e352f39a5", "Anton", sans-serif;
+  color: #0096ff;
+}
+
+.HeadingMain {
+  width: 100%;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .Skills,
+  .Part1,
+  .LatestUpdates,
+  .IntroduceAboutme,
+  .WorkExperience,
+  .LatestProjects,
+  .WorkAreas,
+  .MainPartLanding {
+    width: 100%;
+  }
+
+  .ProfileImageBanner img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .Part1 {
+    width: 80%;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .tagline h1 {
+    font-size: 3rem;
+  }
+  .description p {
+    font-size: 1rem;
+  }
+  .IntroduceAboutme {
+    width: 70%;
+  }
+
+  .lowerHeading {
+    font-size: 65px;
+  }
+  .IntroduceAboutme p {
+    width: 120%;
+  }
+  .WorkExperience,.experienceContainer  {
+    align-items: center;
+    justify-content: center;
+  }
+  .experienceCard{
+    min-width: 300px;
+    
+  } 
+  .skills-box{
+    min-width: 350px;
+  }
+}
+
+/* Slider.css */
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  /* background: #0f111a; */
+  padding: 20px 0;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); */
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+.slider-item {
+  background: linear-gradient(135deg, #0096ff, #00d4ff);
+  color: white;
+  font-weight: 600;
+  padding: 5px 25px;
+  margin: 0 10px;
+  border-radius: 25px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.slider-item:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

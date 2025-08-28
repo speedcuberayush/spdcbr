@@ -1,0 +1,77 @@
+/* Container */
+.news-card {
+  position: relative;
+  width: 100%;
+  /* max-width: 450px; */
+  /* min-width: 350px; */
+  margin: 20px auto;
+  background: linear-gradient(145deg, #1e1e1e, #2b2b2b);
+  /* border-left: 5px solid #0096ff; */
+  border-radius: 12px;
+  padding: 20px 15px 15px 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Date Badge */
+.news-date {
+  position: absolute;
+  top: -18px;
+  left: 15px;
+  background: linear-gradient(135deg, #0096ff, #00b0ff);
+  color: white;
+  font-weight: bold;
+  /* font-family: monos pace; */
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 150, 255, 0.35);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Card Content */
+.news-content {
+  margin-top: 5px;
+  color: #f0f0f0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card-line {
+  margin: 0 0 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+  .news-card {
+    padding: 15px 12px 12px 12px;
+  }
+  .news-date {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+  .news-content {
+    font-size: 15px;
+  }
+}
+
+/* Card Content */
+.news-content {
+  margin-top: 5px;
+  color: #f0f0f0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left; /* align text to the left */
+}
+
+/* Each line */
+.card-line {
+  margin: 0 0 6px 0;
+}
+

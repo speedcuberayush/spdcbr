@@ -1,0 +1,26 @@
+.PortfolioLayout {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  height: 100vh; /* full viewport height */
+}
+
+.centeredPart {
+  display: flex;
+  width: 80%; /* parent width in % */
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.rightmain {
+  position: relative; /* needed for ::after positioning */
+  background-image: url("../../assets/images/ayush.png");
+  background-size: cover;
+  background-position: center;
+  /* border-radius: 20px; */
+  height: 80%;
+  width: 30%;
+}

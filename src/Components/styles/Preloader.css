@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Titan+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+  font-family: "Viafont";
+  src: url("../../assets/fonts/Viafont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Memesique-Regular";
+  src: url("../../assets/fonts/Memesique-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Payback";
+  src: url("../../assets/fonts/Payback.ttf") format("truetype");
+}
+
+.Preloadermain,
+.PreloaderContainer,
+.upper,
+.lower {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Preloadermain {
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #111216;
+  color: #fff;
+  animation: popBack 1s forwards 5s;
+}
+
+.PreloaderContainer {
+  position: relative;
+  flex-direction: column;
+  animation: vanish 1s forwards 7.5s;
+}
+
+.upper {
+  z-index: 1;
+}
+
+.lower {
+  font: 900 100px "Payback", cursive;
+  color: #0096ff;
+  opacity: 0;
+  position: relative;
+  top: -28%;
+  animation: revealLower 1s forwards 3s;
+}
+
+.lower p {
+  margin: 0;
+}
+
+.role{
+  font: 900 30px "Payback", cursive;
+  font: 900 30px "Memesique-Regular", cursive;
+  font-family: "Viafont";
+  font-family: "Bebas Neue", sans-serif;
+  opacity: 0;
+  animation: revealLower 1s forwards 4s;
+  
+}
+
+#animatedPath {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 4s cubic-bezier(0.7, 0, 0.3, 1) forwards,
+  fillPath 1s cubic-bezier(0.7, 0, 0.3, 1) forwards 3s;
+}
+
+.sign p {
+  color: #0096ff;
+  font-weight: bold;
+  animation: neon 0.2s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes popBack { to { transform: scale(0.6); } }
+@keyframes vanish { to { opacity: 1; } }
+@keyframes revealLower { to { opacity: 1; } }
+@keyframes drawPath { to { stroke-dashoffset: 0; } }
+@keyframes fillPath {
+  from { fill: transparent; }
+  to { fill: #fff; }
+}
+@keyframes neon {
+  from {
+    text-shadow:
+      0 0 6px rgba(30,132,242,.6),
+      0 0 12px rgba(30,132,242,.7),
+      0 0 22px rgba(30,132,242,.84),
+      0 0 34px rgba(30,132,242,.88),
+      0 0 46px rgba(30,132,242,.9),
+      0 0 60px rgba(30,132,242,1);
+  }
+  to {
+    text-shadow:
+      0 0 4px rgba(30,132,242,.3),
+      0 0 8px rgba(30,132,242,.4),
+      0 0 16px rgba(30,132,242,.52),
+      0 0 28px rgba(30,132,242,.6),
+      0 0 38px rgba(30,132,242,.65),
+      0 0 54px rgba(30,132,242,.75);
+  }
+}
+

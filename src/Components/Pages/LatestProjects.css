@@ -1,0 +1,187 @@
+.LatestProjects {
+  width: 70%;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  font-family: "bobbyJones", sans-serif;
+  color: #fff;
+}
+
+/* Project Section */
+.ProjectSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Left Part - Image */
+.ProjectLeft {
+  position: relative;
+  width: 600px;
+}
+
+.projectImage {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease;
+}
+
+.projectImage:hover {
+  transform: translateY(-8px);
+}
+
+.projectImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: inherit;
+  filter: brightness(70%); /* tint effect */
+}
+
+/* Title Overlay */
+.projectImage .overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.projectTitle {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Tech Stack Pills */
+.projectTech {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.projectTech span {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ddd;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.projectTech span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Right Part - Half Overlap */
+.ProjectRight {
+  position: absolute;
+  top: 30px;
+  left: calc(600px - 100px); /* half overlap, tweak the -100px */
+  width: 50%;
+  max-width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Links Top Right */
+.ProjectLinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Description Box */
+.ProjectDescription {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 15px;
+  color: #eee;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ProjectSection {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+  }
+
+  .ProjectRight {
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+  
+  .ProjectLeft {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectTech {
+    display: none;
+  }
+  .ProjectRight {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Responsive for Small Devices */
+@media (max-width: 768px) {
+  .ProjectSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ProjectLeft {
+    width: 100%; /* image full width */
+    max-width: 100%;
+  }
+
+  .projectImage {
+    width:350px;
+  }
+
+  .projectTech {
+    display: none; /* hide tech stack */
+  }
+
+  .projectTitle {
+    font-size: 1rem; 
+  }
+
+  .ProjectDescription {
+    font-size: 0.75rem; 
+  }
+
+  .ProjectRight {
+    position: relative;
+    width: 100%;
+    left: 0;
+    max-width: 100%;
+  }
+}

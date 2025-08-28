@@ -1,0 +1,28 @@
+.IntroduceAboutme {
+  width: 70%;
+  /* max-width: 1200px; */
+  margin: 50px auto;
+  font-family: "bobbyJones", sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.IntroduceAboutme p {
+  text-align: center;
+  width: 90%;
+  font-family: "bobbyJones";
+  font-size: 1.05rem;
+  margin: 0.25rem;
+}
+
+.glowingType {
+  color: #0096ff;
+  cursor: pointer;
+}
+
+.glowingType:hover {
+  animation: neon 0.1s infinite alternate;
+}
