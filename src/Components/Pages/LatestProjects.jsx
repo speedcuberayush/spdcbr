@@ -5,6 +5,11 @@ import { IconButton, Tooltip } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DescriptionIcon from "@mui/icons-material/Description";
+import newtonAI from "../../assets/images/projects/newtonAI.jpg";
+import hector from "../../assets/images/projects/hector.jpg";
+import wolf from "../../assets/images/projects/wolf.jpg";
+import codecanvas from "../../assets/images/projects/codecanvas.png";
+
 function ProjectCard({ image, title, tech, links, description }) {
   const iconMap = {
     Demo: <LaunchIcon />,
@@ -59,7 +64,7 @@ function LatestProjects() {
 
       {/* Newton AI */}
       <ProjectCard
-        image="src/assets/images/projects/newtonAI.jpg"
+        image={newtonAI}
         title="Newton AI"
         tech="Python • Next.js • MERN • OpenAI • FFmpeg • TensorFlow • Flask • Tailwind"
         description="An intelligent AI platform designed to provide automated reasoning, problem-solving, and learning capabilities for complex use-cases. Built with cutting-edge deep learning and scalable APIs."
@@ -72,7 +77,7 @@ function LatestProjects() {
 
       {/* Hector Connect  */}
       <ProjectCard
-        image="src/assets/images/projects/hector.jpg"
+        image={hector}
         title="Hector – Smart Campus. Simplified."
         tech="Next.js • MERN • React Native • Redux • Tailwind • MUI • Firebase • WebSockets • Dialogflow • Mapbox • Docker"
         description="A unified smart campus platform (2024–2025) featuring interactive indoor navigation with real-time tracking, one-tap access to blocks, shops, and labs, a central hub for IMS, events, library management, utilities, and placement support. Integrated CU coin gamification and an AI assistant for seamless student engagement."
@@ -85,7 +90,7 @@ function LatestProjects() {
 
       {/* Wolf Automate  */}
       <ProjectCard
-        image="src/assets/images/projects/wolf.jpg"
+        image={wolf}
         title="Unleash Automation with WOLF"
         tech="Python • OpenAI • TensorFlow • FastAPI • Selenium • Docker"
         description="WOLF is an AI-powered automation suite that integrates intelligent reasoning with system, browser, and network workflows. Built on Python and deep learning frameworks, it leverages OpenAI models, scalable APIs, and automation libraries to deliver seamless, adaptive, and enterprise-grade automation."
@@ -98,7 +103,7 @@ function LatestProjects() {
 
       {/* CodeCanvas */}
       <ProjectCard
-        image="src/assets/images/projects/codecanvas.png"
+        image={codecanvas}
         title="CodeCanvas"
         tech="Python • Manim • OpenAI"
         description="An interactive platform that simplifies Data Structures and Algorithms through engaging animations, making learning more visual, intuitive, and effective."
