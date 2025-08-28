@@ -5,7 +5,7 @@ import { IconButton, Tooltip } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DescriptionIcon from "@mui/icons-material/Description";
-import newtonAI from "../../assets/images/projects/newtonAI.jpg";
+import newtonAI from "../../assets/images/projects/newtonai.jpg";
 import hector from "../../assets/images/projects/hector.jpg";
 import wolf from "../../assets/images/projects/wolf.jpg";
 import codecanvas from "../../assets/images/projects/codecanvas.png";
